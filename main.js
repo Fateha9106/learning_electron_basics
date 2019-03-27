@@ -4,7 +4,23 @@ const {app, BrowserWindow} = require('electron')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
-
+// var mysql = require('mysql');
+// var connection = mysql.createConnection({
+//   host     : 'localhost',
+//   user     : 'root',
+//   password : '',
+//   database : 'app'
+// });
+// connection.connect(function(err) {
+//   if (err) {
+//     console.error('error connecting: ' + err.stack);
+//     return;
+//   }
+//   else{
+//     console.log('hoise mama ');
+//   }
+//   console.log('connected as id ' + connection.threadId);
+// });
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
@@ -17,7 +33,7 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
-
+  
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 
