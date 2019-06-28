@@ -101,7 +101,7 @@
 								/>
 							</div>
 
-							<button  id="login" type="submit" class="btn btn-primary">Log In</button>
+							<button id="login" type="submit" class="btn btn-primary">Log In</button>
 						</form>
 					</div>
 				</div>
@@ -118,51 +118,45 @@
 
 		<!-- Menu Toggle Script -->
 		<script>
-      var $ = require('jQuery');
-      $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-      });
-      require('../renderer.js');
-      const form = document.querySelector('form');
-      form.addEventListener('submit', registerUser);
-      // document.getElementById("submit").addEventListener("click", registerUser);
+			var $ = require('jQuery');
+			$('#menu-toggle').click(function(e) {
+				e.preventDefault();
+				$('#wrapper').toggleClass('toggled');
+			});
+			require('./renderer.js');
+			const form = document.querySelector('form');
+			form.addEventListener('submit', registerUser);
+			// document.getElementById("submit").addEventListener("click", registerUser);
 			function registerUser() {
-        
 				var username = document.querySelector('#userId').value;
-        var password = document.querySelector('#userPassword').value;
+				var password = document.querySelector('#userPassword').value;
 				if (username == '' || password == '') {
 					console.log('Error!', 'Values cannot be empty');
 					return;
 				}
-        var mysql = require('mysql');
+				var mysql = require('mysql');
 
-        var con = mysql.createConnection({
-          host: "localhost",
-          user: "root",
-          password: "",
-          database: "app"
-        });
+				var con = mysql.createConnection({
+					host: 'localhost',
+					user: 'root',
+					password: '',
+					database: 'app',
+				});
 
-        con.connect(function(err) {
-          if (err) throw err;
-          console.log("Connected!");
-          //Make SQL statement:
-          var sql = "INSERT INTO add_user (name, password) VALUES ?";
-          //Make an array of values:
-          var values = [
-            [username, password]
-          ];
-          //Execute the SQL statement, with the value array:
-          con.query(sql, [values], function (err, result) {
-            if (err) throw err;
-            console.log("Number of records inserted: " + result.affectedRows);
-          });
-        });
-
+				con.connect(function(err) {
+					if (err) throw err;
+					console.log('Connected!');
+					//Make SQL statement:
+					var sql = 'INSERT INTO add_user (name, password) VALUES ?';
+					//Make an array of values:
+					var values = [[username, password]];
+					//Execute the SQL statement, with the value array:
+					con.query(sql, [values], function(err, result) {
+						if (err) throw err;
+						console.log('Number of records inserted: ' + result.affectedRows);
+					});
+				});
 			}
-
-			
 		</script>
 	</body>
 </html>

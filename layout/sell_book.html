@@ -136,22 +136,7 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td class="col-lg-2">
-												<input type="text" name="Book" class="form-control" />
-											</td>
-											<td class="col-lg-4">
-												<input type="mail" name="mail" class="form-control" />
-											</td>
-											<td class="col-lg-2">
-												<input type="text" name="phone" class="form-control" />
-											</td>
-											<td class="col-lg-2">
-												<input type="text" name="phone" class="form-control" />
-											</td>
-                      <td class="col-lg-2"><input type="button" class="ibtnDel btn btn-md btn-danger " value="Delete"></td>
-                        
-										</tr>
+										
 									</tbody>
 									<tfoot>
 										<tr>
@@ -164,12 +149,12 @@
 												/>
 											</td>
 										</tr>
-										<tr></tr>
+										
 									</tfoot>
 								</table>
 							</div>
               <br><br>
-							<button type="submit" class="btn btn-primary text-center">Check in</button><br><br><br><br>
+							<input type="button" class="btn btn-primary text-center" onclick="CountRows()" value = "Check in"/><br><br><br><br>
 						</form>
 					</div>
 				</div>
@@ -230,6 +215,31 @@
 						grandTotal += +$(this).val();
 					});
 				$('#grandtotal').text(grandTotal.toFixed(2));
+			}
+
+
+			function CountRows() {
+				var totalRowCount = 0;
+				var rowCount = 0;
+				var table = document.getElementById("myTable");
+				var rows = table.getElementsByTagName("tr");
+				console.log ("total " +rows.length);
+				console.log ("total " +rows.length);
+				console.log ("total " +rows.length);
+				console.log ("total " +rows.length);
+				console.log ("total " +rows.length);
+				console.log ("total " +rows.length);
+
+				for (var i = 0; i < rows.length; i++) {
+					totalRowCount++;
+					if (rows[i].getElementsByTagName("td").length > 0) {
+						rowCount++;
+					}
+				}
+				var message = "Total Row Count: " + totalRowCount;
+				message += "\nRow Count: " + rowCount;
+				alert(message);
+				
 			}
 		</script>
 	</body>
