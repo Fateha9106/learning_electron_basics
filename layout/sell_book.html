@@ -1,246 +1,245 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
 
-		<link rel="stylesheet" href="../asset/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="../asset/css/style.css" />
-		<link href="../asset/css/simple-sidebar.css" rel="stylesheet" />
-		<!-- Bootstrap Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script type="text/javascript" src="../asset/js/jquery-3.3.1.min.js"></script>
-		<script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
-		<!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
-		<!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
-		<title>Jhingephul</title>
-	</head>
-	<body>
-		<div class="d-flex" id="wrapper">
-			<!-- Sidebar -->
-			<div class="bg-light border-right" id="sidebar-wrapper">
-				<div class="sidebar-heading">Menu</div>
-				<div class="list-group list-group-flush">
-					<a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-					<a href="stock.html" class="list-group-item list-group-item-action bg-light">Stock</a>
-					<a href="add_book.html" class="list-group-item list-group-item-action bg-light">Add New Book</a>
-					<a href="sell_book.html" class="list-group-item list-group-item-action bg-light">Sell Book</a>
-					<a href="#" class="list-group-item list-group-item-action bg-light">Log Out</a>
-				</div>
-			</div>
-			<!-- /#sidebar-wrapper -->
+<head>
+    <meta charset="UTF-8" />
+    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
 
-			<!-- Page Content -->
-			<div id="page-content-wrapper">
-				<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-					<button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+    <link rel="stylesheet" href="../asset/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../asset/css/style.css" />
+    <link rel="stylesheet" href="../asset/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="../asset/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../asset/font-awesome/css/font-awesome.css.map" />
+    <link href="../asset/css/simple-sidebar.css" rel="stylesheet" />
+    <!-- Bootstrap Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="../asset/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+    <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+    <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+    <title>Jhingephul</title>
+</head>
 
-					<button
-						class="navbar-toggler"
-						type="button"
-						data-toggle="collapse"
-						data-target="#navbarSupportedContent"
-						aria-controls="navbarSupportedContent"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-dark border-right text-white-50" id="sidebar-wrapper">
+            <div class="sidebar-heading">Menu</div>
+            <div class="list-group list-group-flush text-white-50">
+                <a href="dashboard.html" class="list-group-item list-group-item-action bg-dark text-white-50"><i class="fa fa-columns"></i> Dashboard</a>
+                <a href="stock.html" class="list-group-item list-group-item-action bg-dark text-white-50"><i class="fa fa-database"></i> Stock</a>
+                <a href="add_book.html" class="list-group-item list-group-item-action bg-dark text-white-50"><i class="fa fa-plus-square"></i> Add New Book</a>
+                <a href="sell_book.html" class="list-group-item list-group-item-action bg-dark text-white-50"><i class="fa fa-shopping-bag"></i> Sell Book</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-bottom ">
+                <a class="clickable" id="menu-toggle"><i class="fa fa-bars"></i></a>
+
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-							<li class="nav-item active">
-								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Link</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a
-									class="nav-link dropdown-toggle"
-									href="#"
-									id="navbarDropdown"
-									role="button"
-									data-toggle="dropdown"
-									aria-haspopup="true"
-									aria-expanded="false"
-								>
-									Dropdown
-								</a>
-								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="#">Action</a>
-									<a class="dropdown-item" href="#">Another action</a>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#">Something else here</a>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</nav>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user-circle"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right text-secondary" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#"><i class="fa fa-address-card"></i> Profile</a>
+                                <a class="dropdown-item" href="../index.html"><i class="fa fa-power-off"></i> Log out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-				<div class="container-fluid">
-					<div class="container text-left">
-						<br /><br /><br /><br />
-						<form>
-							<div class="section-box">
-								<h3 class="section_title text-center"> <u>Customer Information</u> </h3><br><br>
-								<div class="form-row">
-									<div class="form-group col-md-6">
-										<label for="inputEmail4">Customer Name</label>
-										<input
-											type="text"
-											class="input_bottom form-control"
-											id="inputEmail4"
-											placeholder="Name"
-										/>
-									</div>
-									<div class="form-group col-md-6">
-										<label for="inputPassword4">Email Adress</label>
-										<input
-											type="email"
-											class="input_bottom form-control"
-											id="inputPassword4"
-											placeholder="example@gmail.com"
-										/>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="inputAddress">Phone Number</label>
-									<input
-										type="text"
-										class="input_bottom form-control"
-										id="inputAddress"
-										placeholder="01700000000"
-									/>
-								</div>
-								<div class="form-group">
-									<label for="inputAddress2">Address </label>
-									<input
-										type="text"
-										class="input_bottom form-control"
-										id="inputAddress2"
-										placeholder="Apartment, studio, or floor"
-									/>
-								</div>
-							</div>
-							<br /><br />
-							<div class="section-box">
-								<h3 class="section_title text-center"> <u>Book Information</u> </h3><br><br>
-								<table id="myTable" class=" table order-list">
-									<thead>
-										<tr>
-											<td>Book Id</td>
-											<td>Book Name</td>
-											<td>Price</td>
-											<td>Amount</td>
-										</tr>
-									</thead>
-									<tbody>
-										
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="5" style="text-align: left;">
-												<input
-													type="button"
-													class="btn btn-lg btn-block "
-													id="addrow"
-													value="Add Book"
-												/>
-											</td>
-										</tr>
-										
-									</tfoot>
-								</table>
-							</div>
-              <br><br>
-							<input type="button" class="btn btn-primary text-center" onclick="CountRows()" value = "Check in"/><br><br><br><br>
-						</form>
-					</div>
-				</div>
-			</div>
-			<!-- /#page-content-wrapper -->
-		</div>
-    
-		<!-- All of the Node.js APIs are available in this renderer process.
+            <div class="container-fluid">
+                <div class="container text-left p-4">
+                    <div class="text-center mb-4">
+                        <p class="title-section">Customer Information</p>
+                    </div>
+                    <form>
+                        <div class=" card p-4 text-secondary">
+                            <div class="form-row ">
+                                <div class="form-group col-md-6  pr-5">
+                                    <label for="inputEmail4">Customer Name</label>
+                                    <input type="text" class="input_bottom rounded-0 form-control" id="inputEmail4" placeholder="Name" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Email Adress</label>
+                                    <input type="email" class="input_bottom rounded-0 form-control" id="inputPassword4" placeholder="example@gmail.com" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress">Phone Number</label>
+                                <input type="text" class="input_bottom rounded-0 form-control" id="inputAddress" placeholder="01700000000" />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress2">Address </label>
+                                <input type="text" class="input_bottom rounded-0 form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
+                            </div>
+                        </div>
+                        <div class="text-center my-4">
+                            <p class="title-section">Book Information</p>
+                        </div>
+                        <div class="card p-4 text-secondary">
+                            <table id="myTable text-secondary" class="table table-responsive-lg table-borderless order-list">
+                                <thead>
+                                    <tr class="table-info">
+                                        <td>Book Id</td>
+                                        <td>Book Name</td>
+                                        <td>Unit Price</td>
+                                        <td>Quantity</td>
+                                        <td>Stock</td>
+                                        <td>Price</td>
+                                        <td>Action</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="7" class="text-center">
+                                            <input type="button" class="btn btn-outline-info btn-block px-5" id="addrow" value="Add Book" />
+                                        </td>
+                                    </tr>
+
+                                </tfoot>
+                            </table>
+                        </div>
+                        <br><br>
+                        <div class="text-center">
+                            <input type="button" class="btn btn-lg btn-outline-primary text-center px-5" onclick="CountRows()" value="Check in" /><br><br><br><br>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="row p-5">
+                            <div class="col-md-6">
+                                <img src="http://via.placeholder.com/400x90?text=logo">
+                            </div>
+
+                            <div class="col-md-6 text-right">
+                                <p class="font-weight-bold mb-1">Invoice #550</p>
+                                <p class="text-muted">Due to: 4 Dec, 2019</p>
+                            </div>
+                        </div>
+
+                        <hr class="my-5">
+
+                        <div class="row pb-5 p-5">
+                            <div class="col-md-6">
+                                <p class="font-weight-bold mb-4">Client Information</p>
+                                <p class="mb-1">John Doe, Mrs Emma Downson</p>
+                                <p>Acme Inc</p>
+                                <p class="mb-1">Berlin, Germany</p>
+                                <p class="mb-1">6781 45P</p>
+                            </div>
+
+                            <div class="col-md-6 text-right">
+                                <p class="font-weight-bold mb-4">Payment Details</p>
+                                <p class="mb-1"><span class="text-muted">VAT: </span> 1425782</p>
+                                <p class="mb-1"><span class="text-muted">VAT ID: </span> 10253642</p>
+                                <p class="mb-1"><span class="text-muted">Payment Type: </span> Root</p>
+                                <p class="mb-1"><span class="text-muted">Name: </span> John Doe</p>
+                            </div>
+                        </div>
+
+                        <div class="row p-5">
+                            <div class="col-md-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-0 text-uppercase small font-weight-bold">ID</th>
+                                            <th class="border-0 text-uppercase small font-weight-bold">Item</th>
+                                            <th class="border-0 text-uppercase small font-weight-bold">Description</th>
+                                            <th class="border-0 text-uppercase small font-weight-bold">Quantity</th>
+                                            <th class="border-0 text-uppercase small font-weight-bold">Unit Cost</th>
+                                            <th class="border-0 text-uppercase small font-weight-bold">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Software</td>
+                                            <td>LTS Versions</td>
+                                            <td>21</td>
+                                            <td>$321</td>
+                                            <td>$3452</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Software</td>
+                                            <td>Support</td>
+                                            <td>234</td>
+                                            <td>$6356</td>
+                                            <td>$23423</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Software</td>
+                                            <td>Sofware Collection</td>
+                                            <td>4534</td>
+                                            <td>$354</td>
+                                            <td>$23434</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row-reverse bg-dark text-white p-4">
+                            <div class="py-3 px-5 text-right">
+                                <div class="mb-2">Grand Total</div>
+                                <div class="h2 font-weight-light">$234,234</div>
+                            </div>
+
+                            <div class="py-3 px-5 text-right">
+                                <div class="mb-2">Discount</div>
+                                <div class="h2 font-weight-light">10%</div>
+                            </div>
+
+                            <div class="py-3 px-5 text-right">
+                                <div class="mb-2">Sub - Total amount</div>
+                                <div class="h2 font-weight-light">$32,432</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-light mt-5 mb-5 text-center small">by : <a class="text-light" target="_blank" href="http://totoprayogo.com">totoprayogo.com</a></div>
+
+    </div>
+
+    <!-- All of the Node.js APIs are available in this renderer process.
     We are using Node.js <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>. -->
-		<script src="../asset/js/jquery.min.js"></script>
-		<script src="../asset/js/bootstrap.bundle.min.js"></script>
+    <script src="../asset/js/jquery.min.js"></script>
+    <script src="../asset/js/bootstrap.bundle.min.js"></script>
+    <script src="../asset/js/sell_book.js"></script>
 
-		<!-- Menu Toggle Script -->
-		<script>
-			var $ = require('jQuery');
-			$('#menu-toggle').click(function(e) {
-				e.preventDefault();
-				$('#wrapper').toggleClass('toggled');
-			});
-			// You can also require other files to run in this process
-			require('../renderer.js');
-			$(document).ready(function() {
-				var counter = 0;
+    <!-- Menu Toggle Script -->
+    <script>
+    </script>
+</body>
 
-				$('#addrow').on('click', function() {
-					var newRow = $('<tr>');
-					var cols = '';
-
-					cols += '<td><input type="text" class="form-control" name="name' + counter + '"/></td>';
-					cols += '<td><input type="text" class="form-control" name="mail' + counter + '"/></td>';
-					cols += '<td><input type="text" class="form-control" name="phone' + counter + '"/></td>';
-					cols += '<td><input type="text" class="form-control" name="phone' + counter + '"/></td>';
-					cols += '<td><input type="button" class="ibtnDel btn btn-md btn-danger "  value="Delete"></td>';
-					newRow.append(cols);
-					$('table.order-list').append(newRow);
-					counter++;
-				});
-
-				$('table.order-list').on('click', '.ibtnDel', function(event) {
-					$(this)
-						.closest('tr')
-						.remove();
-					counter -= 1;
-				});
-			});
-
-			function calculateRow(row) {
-				var price = +row.find('input[name^="price"]').val();
-			}
-
-			function calculateGrandTotal() {
-				var grandTotal = 0;
-				$('table.order-list')
-					.find('input[name^="price"]')
-					.each(function() {
-						grandTotal += +$(this).val();
-					});
-				$('#grandtotal').text(grandTotal.toFixed(2));
-			}
-
-
-			function CountRows() {
-				var totalRowCount = 0;
-				var rowCount = 0;
-				var table = document.getElementById("myTable");
-				var rows = table.getElementsByTagName("tr");
-				console.log ("total " +rows.length);
-				console.log ("total " +rows.length);
-				console.log ("total " +rows.length);
-				console.log ("total " +rows.length);
-				console.log ("total " +rows.length);
-				console.log ("total " +rows.length);
-
-				for (var i = 0; i < rows.length; i++) {
-					totalRowCount++;
-					if (rows[i].getElementsByTagName("td").length > 0) {
-						rowCount++;
-					}
-				}
-				var message = "Total Row Count: " + totalRowCount;
-				message += "\nRow Count: " + rowCount;
-				alert(message);
-				
-			}
-		</script>
-	</body>
 </html>
