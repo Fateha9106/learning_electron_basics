@@ -1,162 +1,57 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="asset/css/bootstrap.min.css" />
-		<link href="asset/css/simple-sidebar.css" rel="stylesheet" />
-		<!-- Bootstrap Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script type="text/javascript" src="asset/js/jquery-3.3.1.min.js"></script>
-		<script type="text/javascript" src="asset/js/bootstrap.min.js"></script>
-		<title>Jhingephul</title>
-	</head>
-	<body>
-		<div class="d-flex" id="wrapper">
-			<!-- Sidebar -->
-			<div class="bg-light border-right" id="sidebar-wrapper">
-				<div class="sidebar-heading">Menu</div>
-				<div class="list-group list-group-flush">
-					<a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-					<a href="./layout/stock.html" class="list-group-item list-group-item-action bg-light">Stock</a>
-					<a href="./layout/add_book.html" class="list-group-item list-group-item-action bg-light"
-						>Add New Book</a
-					>
-					<a href="./layout/sell_book.html" class="list-group-item list-group-item-action bg-light"
-						>Sell Book</a
-					>
-					<a href="#" class="list-group-item list-group-item-action bg-light">Log Out</a>
-				</div>
-			</div>
-			<!-- /#sidebar-wrapper -->
 
-			<!-- Page Content -->
-			<div id="page-content-wrapper">
-				<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-					<button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./asset/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./asset/css/style.css" />
+    <link rel="stylesheet" href="./asset/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="./asset/font-awesome/css/font-awesome.min.css" />
+    <link href="./asset/css/simple-sidebar.css" rel="stylesheet" />
+    <!-- Bootstrap Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-					<button
-						class="navbar-toggler"
-						type="button"
-						data-toggle="collapse"
-						data-target="#navbarSupportedContent"
-						aria-controls="navbarSupportedContent"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button>
+    <script type="text/javascript" src="./asset/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./asset/js/bootstrap.min.js"></script>
+    <title>Jhingephul</title>
+</head>
 
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-							<li class="nav-item active">
-								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Link</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a
-									class="nav-link dropdown-toggle"
-									href="#"
-									id="navbarDropdown"
-									role="button"
-									data-toggle="dropdown"
-									aria-haspopup="true"
-									aria-expanded="false"
-								>
-									Dropdown
-								</a>
-								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="#">Action</a>
-									<a class="dropdown-item" href="#">Another action</a>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#">Something else here</a>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</nav>
+<body class=" ">
+    <div>
 
-				<div class="container-fluid">
-					<div class="container text-center">
-						<br /><br /><br /><br />
-						<form>
-							<div class="form-group">
-								<label for="exampleInputEmail1">Email address</label>
-								<input
-									type="text"
-									class="form-control mb-4"
-									id="userId"
-									aria-describedby="emailHelp"
-									placeholder="Enter email"
-								/>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputPassword1">Password</label>
-								<input
-									type="password"
-									class="form-control mb-4"
-									id="userPassword"
-									placeholder="Password"
-								/>
-							</div>
+        <div class="sidenav bg-dark font-weight-light text-right">
+            <div class="login-main-text">
+                <h1 class="font-weight-light"><u>JHINGEPHUL</u></h1><br>
+                <h2 class="font-weight-light">Inventory Application<br> </h2>
+                <h5 class="font-weight-light">Login Page</h5>
+                <p>Login here to access.</p>
+            </div>
+        </div>
+        <div class="main">
+            <div class="col-md-6 col-sm-12">
+                <div class="login-form text-secondary">
+                    <form>
+                        <div class="form-group">
+                            <label>User Name</label>
+                            <input type="text" id="user_name" class="form-control" placeholder="User Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" id="password" class="form-control" placeholder="Password">
+                        </div>
+                        <button id="loginAnchor" type="submit" class="btn btn-outline-dark px-5">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
-							<button id="login" type="submit" class="btn btn-primary">Log In</button>
-						</form>
-					</div>
-				</div>
-			</div>
-			<!-- /#page-content-wrapper -->
-		</div>
+    <script src="asset/js/jquery.min.js"></script>
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./asset/js/auth.js"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+    </script>
+</body>
 
-		<!-- All of the Node.js APIs are available in this renderer process.
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>. -->
-		<script src="asset/js/jquery.min.js"></script>
-		<script src="asset/js/bootstrap.bundle.min.js"></script>
-
-		<!-- Menu Toggle Script -->
-		<script>
-			var $ = require('jQuery');
-			$('#menu-toggle').click(function(e) {
-				e.preventDefault();
-				$('#wrapper').toggleClass('toggled');
-			});
-			require('./renderer.js');
-			const form = document.querySelector('form');
-			form.addEventListener('submit', registerUser);
-			// document.getElementById("submit").addEventListener("click", registerUser);
-			function registerUser() {
-				var username = document.querySelector('#userId').value;
-				var password = document.querySelector('#userPassword').value;
-				if (username == '' || password == '') {
-					console.log('Error!', 'Values cannot be empty');
-					return;
-				}
-				var mysql = require('mysql');
-
-				var con = mysql.createConnection({
-					host: 'localhost',
-					user: 'root',
-					password: '',
-					database: 'app',
-				});
-
-				con.connect(function(err) {
-					if (err) throw err;
-					console.log('Connected!');
-					//Make SQL statement:
-					var sql = 'INSERT INTO add_user (name, password) VALUES ?';
-					//Make an array of values:
-					var values = [[username, password]];
-					//Execute the SQL statement, with the value array:
-					con.query(sql, [values], function(err, result) {
-						if (err) throw err;
-						console.log('Number of records inserted: ' + result.affectedRows);
-					});
-				});
-			}
-		</script>
-	</body>
 </html>

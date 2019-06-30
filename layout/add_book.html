@@ -1,124 +1,131 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../asset/css/bootstrap.min.css" />
-    <link href="../asset/css/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="../asset/css/style.css" />
+    <link rel="stylesheet" href="../asset/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="../asset/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../asset/font-awesome/css/font-awesome.css.map" />
+    <link href="../asset/css/simple-sidebar.css" rel="stylesheet" />
     <!-- Bootstrap Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript" src="../asset/js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+    <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+    <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
     <title>Jhingephul</title>
-  </head>
-  <body>
-      <div class="d-flex" id="wrapper">
+</head>
 
-          <!-- Sidebar -->
-          <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading">Menu </div>
-            <div class="list-group list-group-flush">
-                <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-                <a href="stock.html" class="list-group-item list-group-item-action bg-light">Stock</a>
-                <a href="add_book.html" class="list-group-item list-group-item-action bg-light">Add New Book</a>
-              <a href="sell_book.html" class="list-group-item list-group-item-action bg-light">Sell Book</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Log Out</a>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-dark border-right text-white-50" id="sidebar-wrapper">
+            <div class="sidebar-heading">Menu</div>
+            <div class="list-group list-group-flush text-white-50">
+                <a href="dashboard.html" class="list-group-item list-group-item-action bg-dark text-white-50"><i class="fa fa-columns"></i> Dashboard</a>
+                <a href="stock.html" class="list-group-item list-group-item-action bg-dark text-white-50"><i class="fa fa-database"></i> Stock</a>
+                <a href="add_book.html" class="list-group-item list-group-item-action bg-dark text-white-50"><i class="fa fa-plus-square"></i> Add New Book</a>
+                <a href="sell_book.html" class="list-group-item list-group-item-action bg-dark text-white-50"><i class="fa fa-shopping-bag"></i> Sell Book</a>
             </div>
-          </div>
-          <!-- /#sidebar-wrapper -->
-      
-          <!-- Page Content -->
-          <div id="page-content-wrapper">
-      
-            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light border-bottom">
-              <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
-      
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-      
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-bottom ">
+                <a class="clickable" id="menu-toggle"><i class="fa fa-bars"></i></a>
+
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user-circle"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right text-secondary" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#"><i class="fa fa-address-card"></i> Profile</a>
+                                <a class="dropdown-item" href="../index.html"><i class="fa fa-power-off"></i> Log out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </nav>
-            
-            <div class="container-fluid">
-                <div class="container text-left">
-                  <br><br><br><br>
-                  <form>
-                    <div class="form-group">
-                      <label for="bookId">Book Id (English)</label>
-                      <input type="text" class="form-control mb-2 mr-sm-2" id="bookId" aria-describedby="emailHelp" placeholder="Enter book Id in english"><br>
-                    </div>
-                    <div class="form-group">
-                      <label for="isbn">Book ISBN (English)</label>
-                      <input type="text" class="form-control mb-2 mr-sm-2" id="isbn" aria-describedby="emailHelp" placeholder="Enter book ISBN in english"><br>
-                    </div>
-                    <div class="form-group">
-                      <label for="bookNameEng">Book Name (English)</label>
-                      <input type="text" class="form-control mb-2 mr-sm-2" id="bookNameEng" aria-describedby="emailHelp" placeholder="Enter book name in english"><br>
-                    </div>
-                    <div class="form-group">
-                      <label for="bookNameBn">Book Name (Bangla)</label>
-                      <input type="text" class="form-control mb-2 mr-sm-2 " id="bookNameBn" placeholder="Enter book name in Bangla"><br>
-                    </div>
-                    <div class="form-group">
-                      <label for="authorNameEng">Author Name (English)</label>
-                      <input type="text" class="form-control mb-2 mr-sm-2 " id="authorNameEng" placeholder="Enter author name in English"><br>
-                    </div>
-                    <div class="form-group">
-                      <label for="authorNameBn">Author Name (Bangla)</label>
-                      <input type="text" class="form-control mb-2 mr-sm-2 " id="authorNameBn" placeholder="Enter author name in Bangla"><br>
-                    </div>
-                    <div class="form-group">
-                      <label for="bookPriceEng">Book Price (English)</label>
-                      <input type="number" class="form-control mb-2 mr-sm-2 " id="bookPriceEng" placeholder="Enter book price in English"><br>
-                    </div>
-                    <div class="form-group">
-                      <label for="bookPriceBn">Book Price (Bangla)</label>
-                      <input type="text" class="form-control mb-2 mr-sm-2 " id="bookPriceBn" placeholder="Enter book price in Bangla"><br>
-                    </div>
-                    <div class="form-group">
-                      <label for="descriptionEng">Book Description (English)</label>
-                      <textarea  type="text" class="form-control  " id="descriptionEng" rows="3" placeholder="Enter book description in English"></textarea><br>
-                    </div>
-                    <div class="form-group">
-                      <label for="descriptionBn">Book Description (Bangla)</label>
-                      <textarea  type="text" class="form-control  " id="descriptionBn" rows="3" placeholder="Enter book description in Bangla"></textarea><br>
-                    </div>
-                    
-                    <div class="form-group">
-                      <label for="storage">Storage Amount (English)</label>
-                      <input type="number" class="form-control mb-2 mr-sm-2 " id="storage" placeholder="Enter book storage amount in English"><br>
-                    </div>
-                    
-                    
-                    <button type="submit" class="btn btn-primary">Add</button><br><br><br><br>
-                  </form>
+
+            <div class="container-fluid mb-4">
+                <div class="text-center my-4">
+                    <p class="title-section"><span>ADD NEW BOOK</span></p>
+                </div>
+                <div class="text-left text-secondary card bg-white m-3">
+
+                    <form class="p-4">
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <div class="form-group">
+                                    <label for="bookId">Book Id (English)</label>
+                                    <input type="text" class="form-control mb-4 mr-sm-2" id="bookId" aria-describedby="emailHelp" placeholder="Enter book Id in english">
+                                </div>
+                                <div class="form-group">
+                                    <label for="isbn">Book ISBN (English)</label>
+                                    <input type="text" class="form-control mb-4 mr-sm-2" id="isbn" aria-describedby="emailHelp" placeholder="Enter book ISBN in english">
+                                </div>
+                                <div class="form-group">
+                                    <label for="bookNameEng">Book Name (English)</label>
+                                    <input type="text" class="form-control mb-4 mr-sm-2" id="bookNameEng" aria-describedby="emailHelp" placeholder="Enter book name in english">
+                                </div>
+                                <div class="form-group">
+                                    <label for="bookNameBn">Book Name (Bangla)</label>
+                                    <input type="text" class="form-control mb-4 mr-sm-2 " id="bookNameBn" placeholder="Enter book name in Bangla">
+                                </div>
+                                <div class="form-group">
+                                    <label for="authorNameEng">Author Name (English)</label>
+                                    <input type="text" class="form-control mb-4 mr-sm-2 " id="authorNameEng" placeholder="Enter author name in English">
+                                </div>
+                                <div class="form-group">
+                                    <label for="authorNameBn">Author Name (Bangla)</label>
+                                    <input type="text" class="form-control mb-4 mr-sm-2 " id="authorNameBn" placeholder="Enter author name in Bangla">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="form-group">
+                                    <label for="bookPriceEng">Book Price (English)</label>
+                                    <input type="number" class="form-control mb-4 mr-sm-2 " id="bookPriceEng" placeholder="Enter book price in English">
+                                </div>
+                                <div class="form-group">
+                                    <label for="bookPriceBn">Book Price (Bangla)</label>
+                                    <input type="text" class="form-control mb-4 mr-sm-2 " id="bookPriceBn" placeholder="Enter book price in Bangla">
+                                </div>
+                                <div class="form-group">
+                                    <label for="descriptionEng">Book Description (English)</label>
+                                    <textarea type="text" class="form-control  " id="descriptionEng" rows="3" placeholder="Enter book description in English"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="descriptionBn">Book Description (Bangla)</label>
+                                    <textarea type="text" class="form-control  " id="descriptionBn" rows="3" placeholder="Enter book description in Bangla"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="storage">Storage Amount (English)</label>
+                                    <input type="number" class="form-control mb-4 mr-sm-2 " id="storage" placeholder="Enter book storage amount in English">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-outline-success px-5">Save Book Details</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-          </div>
-          <!-- /#page-content-wrapper -->
-      
         </div>
-    
+        <!-- /#page-content-wrapper -->
+
+    </div>
+
     <!-- All of the Node.js APIs are available in this renderer process.
     We are using Node.js <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
@@ -128,52 +135,54 @@
 
     <!-- Menu Toggle Script -->
     <script>
-      var $ = require('jQuery');
-      $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-      });
-      require('../renderer.js');
-      const form = document.querySelector('form');
-      form.addEventListener('submit', addBook);
-			function addBook() {
-				var bookId = document.querySelector('#bookId').value;
-				var isbn = document.querySelector('#isbn').value;
-				var bookNameEng = document.querySelector('#bookNameEng').value;
-				var bookNameBn = document.querySelector('#bookNameBn').value;
-				var authorNameEng = document.querySelector('#authorNameEng').value;
-				var authorNameBn = document.querySelector('#authorNameBn').value;
-				var bookPriceEng = document.querySelector('#bookPriceEng').value;
-				var bookPriceBn = document.querySelector('#bookPriceBn').value;
-				var descriptionEng = document.querySelector('#descriptionEng').value;
-				var descriptionBn = document.querySelector('#descriptionBn').value;
-        var storage = document.querySelector('#storage').value;
-        
-        var mysql = require('mysql');
-        var con = mysql.createConnection({
-          host: "localhost",
-          user: "root",
-          password: "",
-          database: "app"
+        var $ = require('jQuery');
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
         });
+        require('../renderer.js');
+        const form = document.querySelector('form');
+        form.addEventListener('submit', addBook);
 
-        con.connect(function(err) {
-          if (err) throw err;
-          console.log("Connected!");
-          //Make SQL statement:
-          var sql = "INSERT INTO add_book (book_id, book_isbn, book_name_english, book_name_bangla, author_name_english, author_name_bangla, price_english, price_bangla, description_english, description_bangla, storage) VALUES ?";
-          //Make an array of values:
-          var values = [
-            [bookId, isbn,bookNameEng,bookNameBn,authorNameEng,authorNameBn,bookPriceEng,bookPriceBn,descriptionEng,descriptionBn, storage]
-          ];
-          //Execute the SQL statement, with the value array:
-          con.query(sql, [values], function (err, result) {
-            if (err) throw err;
-            console.log("Number of records inserted: " + result.affectedRows);
-          });
-        });
+        function addBook() {
+            var bookId = document.querySelector('#bookId').value;
+            var isbn = document.querySelector('#isbn').value;
+            var bookNameEng = document.querySelector('#bookNameEng').value;
+            var bookNameBn = document.querySelector('#bookNameBn').value;
+            var authorNameEng = document.querySelector('#authorNameEng').value;
+            var authorNameBn = document.querySelector('#authorNameBn').value;
+            var bookPriceEng = document.querySelector('#bookPriceEng').value;
+            var bookPriceBn = document.querySelector('#bookPriceBn').value;
+            var descriptionEng = document.querySelector('#descriptionEng').value;
+            var descriptionBn = document.querySelector('#descriptionBn').value;
+            var storage = document.querySelector('#storage').value;
 
-			}
+            var mysql = require('mysql');
+            var con = mysql.createConnection({
+                host: "localhost",
+                user: "root",
+                password: "",
+                database: "app"
+            });
+
+            con.connect(function(err) {
+                if (err) throw err;
+                console.log("Connected!");
+                //Make SQL statement:
+                var sql = "INSERT INTO add_book (book_id, book_isbn, book_name_english, book_name_bangla, author_name_english, author_name_bangla, price_english, price_bangla, description_english, description_bangla, storage) VALUES ?";
+                //Make an array of values:
+                var values = [
+                    [bookId, isbn, bookNameEng, bookNameBn, authorNameEng, authorNameBn, bookPriceEng, bookPriceBn, descriptionEng, descriptionBn, storage]
+                ];
+                //Execute the SQL statement, with the value array:
+                con.query(sql, [values], function(err, result) {
+                    if (err) throw err;
+                    console.log("Number of records inserted: " + result.affectedRows);
+                });
+            });
+
+        }
     </script>
-  </body>
+</body>
+
 </html>
