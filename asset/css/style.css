@@ -1,3 +1,6 @@
+/* $fa-font-path:"../node_modules/font-awesome/fonts"; */
+@import "../../node_modules/font-awesome/scss/font-awesome.scss";
+@import "../../node_modules/font-awesome/css/font-awesome.min.css";
 .input_bottom {
     outline: 0;
     border-width: 0 0 1px;

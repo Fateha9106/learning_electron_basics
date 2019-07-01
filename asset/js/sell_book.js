@@ -5,17 +5,21 @@ $('#menu-toggle').click(function(e) {
 });
 // You can also require other files to run in this process
 require('../renderer.js');
+$('#bill-submit').on('click', '.ibtnDel', function(event) {
+    a = document.querySelector("#bill_form");
+    console.log(a);
+});
 $(document).ready(function() {
     var counter = 0;
 
     $('#addrow').on('click', function() {
-        var newRow = $('<tr>');
+        var newRow = $('<tr id="' + counter + '">');
         var cols = '';
 
-        cols += '<td><input type="text" class="form-control  rounded-0" name="name' + counter + '"/></td>';
-        cols += '<td><input type="text" class="form-control  rounded-0" name="phone' + counter + '"/></td>';
+        cols += '<td><input type="text" class="form-control  rounded-0" name="name"/></td>';
+        cols += '<td><input type="text" class="form-control  rounded-0" name="phone"/></td>';
         cols += '<td></td>';
-        cols += '<td><input type="text" class="form-control  rounded-0" name="phone' + counter + '"/></td>';
+        cols += '<td><input type="text" class="form-control  rounded-0" name="phone"/></td>';
         cols += '<td></td>';
         cols += '<td></td>';
         cols += '<td><input type="button" class="ibtnDel btn btn-md btn-outline-danger rounded-0"  value="Delete"></td>';
@@ -30,6 +34,7 @@ $(document).ready(function() {
             .remove();
         counter -= 1;
     });
+    
 });
 
 function calculateRow(row) {
@@ -48,26 +53,26 @@ function calculateGrandTotal() {
 
 
 function CountRows() {
-    var totalRowCount = 0;
-    var rowCount = 0;
-    var table = document.getElementById("myTable");
-    var rows = table.getElementsByTagName("tr");
-    console.log("total " + rows.length);
-    console.log("total " + rows.length);
-    console.log("total " + rows.length);
-    console.log("total " + rows.length);
-    console.log("total " + rows.length);
-    console.log("total " + rows.length);
+    // var totalRowCount = 0;
+    // var rowCount = 0;
+    // var table = document.getElementById("myTable");
+    // var rows = table.getElementsByTagName("tr");
+    // console.log("total " + rows.length);
+    // console.log("total " + rows.length);
+    // console.log("total " + rows.length);
+    // console.log("total " + rows.length);
+    // console.log("total " + rows.length);
+    // console.log("total " + rows.length);
 
-    for (var i = 0; i < rows.length; i++) {
-        totalRowCount++;
-        if (rows[i].getElementsByTagName("td").length > 0) {
-            rowCount++;
-        }
-    }
-    var message = "Total Row Count: " + totalRowCount;
-    message += "\nRow Count: " + rowCount;
-    alert(message);
+    // for (var i = 0; i < rows.length; i++) {
+    //     totalRowCount++;
+    //     if (rows[i].getElementsByTagName("td").length > 0) {
+    //         rowCount++;
+    //     }
+    // }
+    // var message = "Total Row Count: " + totalRowCount;
+    // message += "\nRow Count: " + rowCount;
+    // alert(message);
 
 }
 
@@ -117,13 +122,13 @@ function debounce(func, wait, immediate) {
 /////////////////////////////////
 // DEMO:
 
-function onMouseMove(e) {
-    console.clear();
-    console.log(e.x, e.y);
-}
+// function onMouseMove(e) {
+//     console.clear();
+//     console.log(e.x, e.y);
+// }
 
-// Define the debounced function
-var debouncedMouseMove = debounce(onMouseMove, 50);
+// // Define the debounced function
+// var debouncedMouseMove = debounce(onMouseMove, 50);
 
-// Call the debounced function on every mouse move
-window.addEventListener('mousemove', debouncedMouseMove);
+// // Call the debounced function on every mouse move
+// window.addEventListener('mousemove', debouncedMouseMove);

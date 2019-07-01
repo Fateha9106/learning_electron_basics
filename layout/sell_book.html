@@ -7,9 +7,9 @@
 
     <link rel="stylesheet" href="../asset/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../asset/css/style.css" />
-    <link rel="stylesheet" href="../asset/font-awesome/css/font-awesome.css" />
+    <!--<link rel="stylesheet" href="../asset/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="../asset/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../asset/font-awesome/css/font-awesome.css.map" />
+    <link rel="stylesheet" href="../asset/font-awesome/css/font-awesome.css.map" />-->
     <link href="../asset/css/simple-sidebar.css" rel="stylesheet" />
     <!-- Bootstrap Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -64,7 +64,7 @@
                     <div class="text-center mb-4">
                         <p class="title-section">Customer Information</p>
                     </div>
-                    <form>
+                    
                         <div class=" card p-4 text-secondary">
                             <div class="form-row ">
                                 <div class="form-group col-md-6  pr-5">
@@ -89,37 +89,41 @@
                             <p class="title-section">Book Information</p>
                         </div>
                         <div class="card p-4 text-secondary">
-                            <table id="myTable text-secondary" class="table table-responsive-lg table-borderless order-list">
-                                <thead>
-                                    <tr class="table-info">
-                                        <td>Book Id</td>
-                                        <td>Book Name</td>
-                                        <td>Unit Price</td>
-                                        <td>Quantity</td>
-                                        <td>Stock</td>
-                                        <td>Price</td>
-                                        <td>Action</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="7" class="text-center">
-                                            <input type="button" class="btn btn-outline-info btn-block px-5" id="addrow" value="Add Book" />
-                                        </td>
-                                    </tr>
-
-                                </tfoot>
-                            </table>
-                        </div>
-                        <br><br>
+                            <form action="" id="bill_form">
+                                    <table id="myTable text-secondary" class="table table-responsive-lg table-borderless order-list">
+                                            <thead>
+                                                <tr class="table-info">
+                                                    <td>Book Id</td>
+                                                    <td>Book Name</td>
+                                                    <td>Unit Price</td>
+                                                    <td>Quantity</td>
+                                                    <td>Stock</td>
+                                                    <td>Price</td>
+                                                    <td>Action</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="7" class="text-center">
+                                                        <input type="button" class="btn btn-outline-info btn-block px-5" id="addrow" value="Add Book" />
+                                                    </td>
+                                                </tr>
+            
+                                            </tfoot>
+                                        </table>
+                                        <br><br>
                         <div class="text-center">
-                            <input type="button" class="btn btn-lg btn-outline-primary text-center px-5" onclick="CountRows()" value="Check in" /><br><br><br><br>
+                            <input type="submit" id="bill-submit" class="btn btn-lg btn-outline-primary text-center px-5" onclick="CountRows()" value="Check in" /><br><br><br><br>
                         </div>
+                            </form>
+                            
+                        </div>
+                        
 
-                    </form>
+                    
                 </div>
             </div>
         </div>
